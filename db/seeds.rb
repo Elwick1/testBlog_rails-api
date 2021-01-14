@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Post.destroy_all
+User.destroy_all
+
 Post.create([
     {
         title: "Post One",
@@ -17,5 +20,16 @@ Post.create([
     {
         title: "The Final Post",
         body: "The final stand of post testing"
+    }
+])
+
+User.create([
+    {
+        username: "admin",
+        password: "1"
+    },
+    {
+        username: "admin2",
+        password: "1"
     }
 ])
